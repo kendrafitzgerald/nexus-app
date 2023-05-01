@@ -33,19 +33,21 @@ blogPosts.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: 'major', // is this correct? am i reading the diagram in googledrive correctly? 
+                key: 'major', // is this correct? am I reading the diagram in googledoc correctly? 
             },
-            created_at: {
+        },
+        created_at: {
                 type: DataTypes.DATE,
                 allowNull: false,
                 defaultValue: DataTypes.NOW,
             },
         },
+        {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'blogPosts',
     },
 );
 
