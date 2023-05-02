@@ -16,13 +16,21 @@
             </div>
         </form>
     </div>
-    <div class="text-center">
+</div>
 
 {{! Above code is for creating blogpost and below code is for viewing post, what am I missing? something to separate the two? }}
 
-        <h2>{{title}}</h2>
-        <p>{{content}}</p>
-        <p>Created by {{user_id}} on {{format_date date_created}}</p>
-        <p>
-        <p>{{spotify}}</p> {{! placeholder for spotify}}
+    <div class="row mt-4">
+    <div class="col-md-6">
+        {{#if blogpost}}
+            <h2>{{title}}</h2>
+            <p>{{content}}</p>
+            <p>Created by {{user_id}} on {{format_date blogpost.date_created}}</p>
+            {{#if blogpost.spotify}}{{! placeholder for spotify}}
+                <p>{{blogpost.spotify}}</p>
+            {{/if}}
+        {{else}}
+            <p>No blog post found.</p>
+        {{/if}}
     </div>
+</div>
