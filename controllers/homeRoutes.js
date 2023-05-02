@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const withAuth = require('../utils/withAuth');
-const {User, BlogPost, Comments} = require('../models');
+const {User, BlogPost} = require('../models');
 
-router.get('/', async(res, req) => {
+router.get('/', async(req, res) => {
     try{
         //Get all post data with username
         const postData = await BlogPost.findAll({
@@ -15,10 +15,11 @@ router.get('/', async(res, req) => {
         const posts = postData.map((post) => post.get({ plain: true }))
         res.render('homepage', {
             posts,
-            logged_in: req.session.logged_in
+            loggedIn: req.session.loggedIn
         })
     } catch(error) {
-        res.status(500).json(error);
+        console.log("error")
+        res.status(500).json(error)
     }
 });
 
@@ -30,13 +31,13 @@ router.get('/posts/:id', async (req, res) => {
                 {
                     model: User,
                 },
-                {
-                    model: Comments,
-                    include: {
-                        model: User,
-                        attributes: ['username']
-                    }
-                }
+                // {
+                //     model: Comments,
+                //     include: {
+                //         model: User,
+                //         attributes: ['username']
+                //     }
+                // }
             ],
         });
         //render on the posts page

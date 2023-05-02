@@ -29,19 +29,21 @@ BlogPosts.init(
                 key: 'id',
             },
         },
-        comment_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'comments',
-                key: 'id',
-            },
-        },
-
+        // comment_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'comments',
+        //         key: 'id',
+        //     },
+        // },
+    },
+   {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'blogPosts',
+
     },
 );
 
