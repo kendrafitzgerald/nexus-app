@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class blogPosts extends Model { }
+class BlogPosts extends Model { }
 
-blogPosts.init(
+BlogPosts.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -32,23 +32,17 @@ blogPosts.init(
         comment_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
-                key: 'major', // is this correct? am I reading the diagram in googledoc correctly? 
+                model: 'comments',
+                key: 'id',
             },
         },
-        created_at: {
-                type: DataTypes.DATE,
-                allowNull: false,
-                defaultValue: DataTypes.NOW,
-            },
-        },
-        {
+
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'blogPosts',
     },
 );
 
-module.exports = blogPosts;
+module.exports = BlogPosts;
