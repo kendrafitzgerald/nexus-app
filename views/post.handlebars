@@ -1,30 +1,28 @@
-<div class="text-center">
-  <h2>{{title}}</h2>
-  <p>{{content}}</p>
-  <p>Created by {{user_id}} on {{format_date date_created}}</p>
-  <p>
-  <p>{{spotify}}</p> {{! placeholder for spotify}}
-</div>
-
 <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a new blog post</h3>
+    <div class="col-md-6">
+        <h3>Create a new blog post</h3>
 
-    <form class="form new-blogpost-form">
-      <div class="form-group">
-        <label for="blogpost-title">Title:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
+        <form class="form new-blogpost-form">
+            <div class="form-group">
+                <label for="blogpost-title">Title:</label>
+                <input class="form-input" type="text" id="" name="blogpost-title" />
+            </div>
+            <div class="form-group">
+                <label for="content">content:</label>
+                <textarea class="form-input" id="content" name="content"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+    <div class="text-center">
+
+{{! Above code is for creating blogpost and below code is for viewing post, what am I missing? something to separate the two? }}
+
+        <h2>{{title}}</h2>
+        <p>{{content}}</p>
+        <p>Created by {{user_id}} on {{format_date date_created}}</p>
+        <p>
+        <p>{{spotify}}</p> {{! placeholder for spotify}}
+    </div>
