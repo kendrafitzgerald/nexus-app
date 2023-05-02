@@ -1,29 +1,13 @@
 const router = require('express').Router();
-const { blogPosts, comments, users } = require('../../models');
-
-// GET a single blogpost
-router.get('/:id', async (req, res) => {
-  try {
-    const blogpostData = await blogPosts.findByPk(req.params.id, {
-      // JOIN with comments and users
-      include: [{ model: comments }, { model: users }]
-    });
-
-    if (!blogpostData) {
-      res.status(404).json({ message: 'No blogpost found with this id!' });
-      return;
-    }
-
-    res.status(200).json(blogpostData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+const { BlogPosts } = require('../../models');
 
 // CREATE a blogpost
 router.post('/', async (req, res) => {
   try {
-    const blogpostData = await blogPosts.create(req.body);
+    const blogpostData = await BlogPosts.create({
+        ...req.body,
+        user_id:req.session.userID
+    });
     res.status(200).json(blogpostData);
   } catch (err) {
     res.status(400).json(err);
@@ -33,7 +17,7 @@ router.post('/', async (req, res) => {
 // DELETE a blogpost
 router.delete('/:id', async (req, res) => {
   try {
-    const blogpostData = await blogPosts.destroy({
+    const blogpostData = await BlogPosts.destroy({
       where: {
         id: req.params.id
       }
