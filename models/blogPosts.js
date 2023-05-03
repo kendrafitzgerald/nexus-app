@@ -19,9 +19,9 @@ BlogPosts.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        spotify: {
-            type: DataTypes.STRING,
-        },
+        // spotify: {
+        //     type: DataTypes.STRING,
+        // },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
