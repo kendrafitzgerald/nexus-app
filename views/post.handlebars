@@ -23,9 +23,9 @@
     <div class="row mt-4">
     <div class="col-md-6">
         {{#if blogpost}}
-            <h2>{{title}}</h2>
-            <p>{{content}}</p>
-            <p>Created by {{user_id}} on {{format_date blogpost.date_created}}</p>
+            <h2>{{blogpost.title}}</h2>
+            <p>{{blogpost.content}}</p>
+            <p>Created by {{user_id}} on {{format_date createdAt}}</p>
             {{#if blogpost.spotify}}{{! placeholder for spotify}}
                 <p>{{blogpost.spotify}}</p>
             {{/if}}
