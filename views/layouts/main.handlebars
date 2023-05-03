@@ -28,14 +28,13 @@
           <a href="/profile" class="navbar-item">
             Profile
           </a>
-          {{!-- {{#if loggedIn}} --}}
+          {{#if loggedIn}}
             <button class="button" id="logout">Log Out</button>
-          {{!-- {{else}} --}}
+          {{else}}
             <a href="/login" class="navbar-item">Log In</a>
             <a href="/signup" class="">Sign Up</a>
-          {{!-- {{/if}} --}}
+          {{/if}}
         </div>
-
       </nav>
 
     {{!-- {{#if loggedIn}}
