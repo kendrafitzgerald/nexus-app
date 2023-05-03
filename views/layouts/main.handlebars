@@ -32,14 +32,14 @@
             <button class="button" id="logout">Log Out</button>
           {{else}}
             <a href="/login" class="navbar-item">Log In</a>
-            <a href="/signup" class="">Sign Up</a>
+            <a href="/signup" class="navbar-item">Sign Up</a>
           {{/if}}
         </div>
       </nav>
 
-    {{!-- {{#if loggedIn}}
+    {{#if loggedIn}}
       <script src="/js/logout.js"></script>
-    {{/if}} --}}
+    {{/if}}
     </div>
 
     {{{body}}}
