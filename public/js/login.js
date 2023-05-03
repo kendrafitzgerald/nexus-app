@@ -4,7 +4,6 @@
 //     signup.setAttribute('style','display: none')
 // });
 
-
 const loginFormHandler = async (event) => {
     event.preventDefault();
   

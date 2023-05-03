@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const withAuth = require('../../utils/withAuth');
-const { Comments, BlogPost, User } = require('../../models');
+const { Comments, BlogPosts, User } = require('../../models');
 
 
 // CREATE a comment
@@ -14,7 +13,7 @@ router.post('/:id', withAuth, async (req, res) => {
         });
         const userID = userData.id
 
-        const blogpostData = await BlogPost.findOne({
+        const blogpostData = await BlogPosts.findOne({
             where: {
                 id: req.params.id
             }
@@ -24,7 +23,7 @@ router.post('/:id', withAuth, async (req, res) => {
 
         const newComment = await Comments.create({
             content: req.body.content,
-            post_id: blogpostID,
+            blogpost_id: blogpostID,
             user_id: userID
         });
         res.status(200).json(newComment);
@@ -46,7 +45,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         });
         const userID = userData.id
 
-        const blogpostData = await BlogPost.findOne({
+        const blogpostData = await BlogPosts.findOne({
             where: {
                 id: req.params.id
             }
@@ -56,7 +55,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 
         const newComment = await Comments.destroy({
             content: req.body.content,
-            post_id: blogpostID,
+            blogpost_id: blogpostID,
             user_id: userID
         });
         res.status(200).json(newComment);
