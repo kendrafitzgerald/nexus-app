@@ -1,42 +1,30 @@
-const login = document.querySelector("#show-login");
-const signup = document.querySelector("#show-signup");
-let showLogin = document.querySelector("#login-form");
-let showSignUp = document.querySelector("#signup-form");
 
-login.addEventListener("click", () => {
-  showLogin.setAttribute("style", "display: block");
-  login.setAttribute("style", "display: none");
-  signup.setAttribute("style", "display: none");
+login.addEventListener('click', () => {
+    login.setAttribute('style','display: none');
+    signup.setAttribute('style','display: none')
 });
 
-signup.addEventListener("click", () => {
-  showLogin.setAttribute("style", "display: block");
-  login.setAttribute("style", "display: none");
-  signup.setAttribute("style", "display: none");
-});
 
 const loginFormHandler = async (event) => {
-  event.preventDefault();
-
-  const username = document.querySelector("#username-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
-
-  if (username && password) {
-    const response = await fetch("/api/users/login", {
-      method: "POST",
-      body: JSON.stringify({ username, password }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      // If response is ok , redirect the browser to the profile page
-      document.location.replace("/profile");
-    } else {
-      alert(response.statusText);
+    event.preventDefault();
+  
+    const username = document.querySelector('#username-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
+  
+    if (username && password) {
+      const response = await fetch('/api/users/login', {
+        method: 'POST',
+        body: JSON.stringify({ username, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        // If response is ok , redirect the browser to the profile page
+        document.location.replace('/profile');
+      } else {
+        alert(response.statusText);
+      }
     }
-  }
-};
+  };
 
-document
-  .querySelector("#login-form")
-  .addEventListener("submit", loginFormHandler);
+document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
