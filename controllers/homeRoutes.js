@@ -31,13 +31,13 @@ router.get('/posts/:id', async (req, res) => {
                 {
                     model: User,
                 },
-                // {
-                //     model: Comments,
-                //     include: {
-                //         model: User,
-                //         attributes: ['username']
-                //     }
-                // }
+                {
+                    model: Comments,
+                    include: {
+                        model: User,
+                        attributes: ['username']
+                    }
+                }
             ],
         });
         //render on the posts page
