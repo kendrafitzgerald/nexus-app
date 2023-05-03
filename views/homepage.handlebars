@@ -1,0 +1,12 @@
+<h1 class="display-6">See What Other Students are Saying!</h1>
+{{#each blogPosts as |blogPost| }}
+<div class="card text-bg-info mb-3" style="max-width: 18rem;">
+   <a href="/posts/{{id}}">
+ <div class="card-header">Posted by {{user.username}} from {{user.school}} on {{format_date createdAt}}</div>
+ <div class="card-body">
+   <h5 class="card-title">{{title}}</h5>
+   <p class="card-text">Click on Me to Read More!</p>
+ </div>
+ </a>
+ {{/each}}
+</div>
