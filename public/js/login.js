@@ -1,8 +1,8 @@
 
-login.addEventListener('click', () => {
-    login.setAttribute('style','display: none');
-    signup.setAttribute('style','display: none')
-});
+// login.addEventListener('click', () => {
+//     login.setAttribute('style','display: none');
+//     signup.setAttribute('style','display: none')
+// });
 
 
 const loginFormHandler = async (event) => {

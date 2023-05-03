@@ -1,7 +1,8 @@
-signup.addEventListener('click', () => {
-    login.setAttribute('style','display: none');
-    signup.setAttribute('style','display: none')
-});
+
+// signup.addEventListener('click', () => {
+//     login.setAttribute('style','display: none');
+//     signup.setAttribute('style','display: none')
+// });
 
 const signupFormHandler = async (event) => {
     event.preventDefault();

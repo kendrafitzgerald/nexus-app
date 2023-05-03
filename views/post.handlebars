@@ -1,33 +1,14 @@
-<div class="row mt-4">
-    <div class="col-md-6">
-        <h3>Create a new blog post</h3>
-
-        <form class="form new-blogpost-form">
-            <div class="form-group">
-                <label for="blogpost-title">Title:</label>
-                <input class="form-input" type="text" id="" name="blogpost-title" />
-            </div>
-            <div class="form-group">
-                <label for="content">Content:</label>
-                <textarea class="form-input" id="content" name="content"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create</button>
-            </div>
-        </form>
-    </div>
-</div>
 
 {{! Above code is for creating blogpost and below code is for viewing post, what am I missing? something to separate the two? }}
 
     <div class="row mt-4">
     <div class="col-md-6">
-        {{#if blogpost}}
-            <h2>{{blogpost.title}}</h2>
-            <p>{{blogpost.content}}</p>
+        {{#if blogPost}}
+            <h2>{{blogPost.title}}</h2>
+            <p>{{blogPost.content}}</p>
             <p>Created by {{user_id}} on {{format_date createdAt}}</p>
-            {{#if blogpost.spotify}}{{! placeholder for spotify}}
-                <p>{{blogpost.spotify}}</p>
+            {{#if blogPost.spotify}}{{! placeholder for spotify}}
+                <p>{{blogPost.spotify}}</p>
             {{/if}}
         {{else}}
             <p>No blog post found.</p>

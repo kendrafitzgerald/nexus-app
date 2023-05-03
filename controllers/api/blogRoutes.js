@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { BlogPosts } = require('../../models');
+const { BlogPost } = require('../../models');
 
 // CREATE a blogpost
 router.post('/', async (req, res) => {
   try {
-    const blogpostData = await BlogPosts.create({
+    const blogpostData = await BlogPost.create({
         ...req.body,
-        user_id:req.session.userID
+        user_id: req.session.userID
     });
     res.status(200).json(blogpostData);
   } catch (err) {
@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
 // DELETE a blogpost
 router.delete('/:id', async (req, res) => {
   try {
-    const blogpostData = await BlogPosts.destroy({
+    const blogpostData = await BlogPost.destroy({
       where: {
         id: req.params.id
       }

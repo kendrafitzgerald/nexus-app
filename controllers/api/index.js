@@ -5,7 +5,7 @@ const blogRoutes = require('../api/blogRoutes');
 // const commentRoutes = require('../api/commentRoutes');
 
 //path to user api
-router.use('/user', userRoutes);
+router.use('/users', userRoutes);
 
 //path to posts api
 router.use('/posts', blogRoutes);

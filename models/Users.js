@@ -41,19 +41,19 @@ User.init(
     },
     major: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     clubs: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     start_date: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
     graduation_date: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {

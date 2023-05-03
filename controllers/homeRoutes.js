@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/withAuth');
-const {User, BlogPost} = require('../models');
+const {User, BlogPost, Comments} = require('../models');
 
 router.get('/', async(req, res) => {
     try{
@@ -31,13 +31,13 @@ router.get('/posts/:id', async (req, res) => {
                 {
                     model: User,
                 },
-                // {
-                //     model: Comments,
-                //     include: {
-                //         model: User,
-                //         attributes: ['username']
-                //     }
-                // }
+                {
+                    model: Comments,
+                    include: {
+                        model: User,
+                        attributes: ['username']
+                    }
+                }
             ],
         });
         //render on the posts page
@@ -54,8 +54,8 @@ router.get('/posts/:id', async (req, res) => {
 // accessing users profile withe their blog-posts
 router.get('/profile', withAuth, async (req, res) => {
     try {
-        const userData = await User.findByPk(req.session.userId, {
-            include: [{model: Posts}],
+        const userData = await User.findByPk(req.session.userID, {
+            include: [{model: BlogPost}],
         });
         const user = userData.get({plain: true});
         console.log(user)
