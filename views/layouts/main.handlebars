@@ -14,33 +14,42 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
+
   <body>
-    <div>
+    <div class='bg-info-subtle bg-gradient'>
       <div class="header">
-        <h1 class="">Nexus</h1>
+        <h1 class="text-primary-emphasis pt-5">Nexus</h1>
+        <p class="fst-italic fw-lighter text-primary-emphasis pt-3">Find College Life Hacks by Making Meaningful Connections</p>
       </div>
+    
 
-      <nav class="navbar bg-info bg-gradient">
-        <div class="navbar-nav justify-content-center">
-          <a href="/" class="navbar-item">
-            Home
-          </a>
-          <a href="/profile" class="navbar-item">
-            Profile
-          </a>
-          {{!-- {{#if loggedIn}} --}}
-            <button class="button" id="logout">Log Out</button>
-          {{!-- {{else}} --}}
-            <a href="/login" class="navbar-item">Log In</a>
-            <a href="/signup" class="">Sign Up</a>
-          {{!-- {{/if}} --}}
-        </div>
+      <div>
+<nav class="navbar justify-content-end">
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link text-primary-emphasis"  href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-primary-emphasis" href="/profile">Profile</a>
+  </li>
+   {{#if loggedIn}}
+     <button class="button" id="logout">Log Out</button> 
 
-      </nav>
+    {{else}}
+  <li class="nav-item">
+    <a class="nav-link text-primary-emphasis" href="/login">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-primary-emphasis" href="/signup">Signup</a>
+  </li>
+   {{/if}}
+</ul>
+</nav>
 
-    {{!-- {{#if loggedIn}}
+    {{#if loggedIn}}
       <script src="/js/logout.js"></script>
-    {{/if}} --}}
+    {{/if}}
+    </div>
     </div>
 
     {{{body}}}
