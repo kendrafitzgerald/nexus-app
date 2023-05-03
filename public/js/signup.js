@@ -1,9 +1,3 @@
-
-// signup.addEventListener('click', () => {
-//     login.setAttribute('style','display: none');
-//     signup.setAttribute('style','display: none')
-// });
-
 const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -20,7 +14,7 @@ const signupFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/login');
       } else {
         alert(response.statusText);
       }
