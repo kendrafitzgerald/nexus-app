@@ -1,7 +1,8 @@
-
 <h2 class="display-6 font-monospace" id="homepage-title">See What Other Students are Saying!</h2>
+<div class="container px-3">
+  <div class="row">
 {{#each posts as |post| }}
-<div class="card mb-3" id="post-card"style="max-width: 18rem;">
+<div class="card mb-3 col gx-2 px-2 mx-2" id="post-card"style="max-width: 18rem;">
    <a href="/posts/{{id}}">
  <div class="card-header font-monospace text-primary-emphasis">Posted by @{{user.username}} from {{user.school}} on {{format_date createdAt}}</div>
  <div class="card-body">
@@ -11,4 +12,6 @@
  </a>
  </div>
  {{/each}}
+ </div>
+ </div>
  {{!-- need to create these as columns, but using column containers creates each card as its own column group --}}
