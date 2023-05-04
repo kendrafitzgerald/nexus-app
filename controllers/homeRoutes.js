@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/withAuth');
+const spotifyApi = require('../server')
 const {User, BlogPost, Comments} = require('../models');
 
 router.get('/', async(req, res) => {
