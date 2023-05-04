@@ -55,6 +55,10 @@ User.init(
       type: DataTypes.DATE,
       allowNull: true,
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true
+    }
   },
   {
     hooks: {
