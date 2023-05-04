@@ -4,15 +4,19 @@ const { Comments, BlogPost, User } = require('../../models');
 
 
 // CREATE a comment
-router.post('/:id', withAuth, async (req, res) => {
+router.post('/:id', 
+// withAuth,
+ async (req, res) => {
     try {
-        const userData = await User.findOne({
-            where: {
-                id: req.session.userId
-            }
+        console.log(req.params);
+        console.log(req.body);
+        //const userData = await User.findOne({
+          //  where: {
+            //    id: req.session.userID
+            //}
 
-        });
-        const userID = userData.id
+        //});
+        //const userID = userData.id
 
         const blogpostData = await BlogPost.findOne({
             where: {
@@ -21,14 +25,17 @@ router.post('/:id', withAuth, async (req, res) => {
 
         });
         const blogpostID = blogpostData.id
+        console.log(blogpostID);
 
         const newComment = await Comments.create({
             content: req.body.content,
             post_id: blogpostID,
-            user_id: userID
+            user_id: req.session.userID
         });
+        console.log(newComment)
         res.status(200).json(newComment);
     } catch (err) {
+        console.log(err)
         res.status(400).json(err)
     }
 });
