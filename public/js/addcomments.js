@@ -1,14 +1,16 @@
-let createButton = document.getElementById('create-button');
+let createCommentButton = document.getElementById('create-button');
 
 let commentForm = document.getElementById('new-comments-form');
 
-createButton.addEventListener('click', () => {
+createCommentButton.addEventListener('click', () => {
+  console.log('you clicked me')
         commentForm.setAttribute('style', 'display: block');
-        createButton.setAttribute('style', 'display: none')
+        createCommentButton.setAttribute('style', 'display: none')
 });
 
 const newCommentsHandler = async (event) => {
-    event.preventDefault ();
+    event.preventDefault();
+    console.log("You clicked me");
     const content = document.querySelector('#content').value.trim();
     const id = window.location.toString().split("/")[window.location.toString().split("/").length-1]
   
@@ -21,7 +23,7 @@ const newCommentsHandler = async (event) => {
   
       if (response.ok) {
         // If response is ok , reload page
-        document.location.replace('/profile');
+        document.location.replace(`/posts/${id}`);
       } else {
         alert(response.statusText);
       }
