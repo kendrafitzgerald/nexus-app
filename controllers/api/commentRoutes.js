@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comments, BlogPosts, User } = require('../../models');
+const { Comments, BlogPost, User } = require('../../models');
 
 
 // CREATE a comment
@@ -13,7 +13,7 @@ router.post('/:id', withAuth, async (req, res) => {
         });
         const userID = userData.id
 
-        const blogpostData = await BlogPosts.findOne({
+        const blogpostData = await BlogPost.findOne({
             where: {
                 id: req.params.id
             }
@@ -45,7 +45,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         });
         const userID = userData.id
 
-        const blogpostData = await BlogPosts.findOne({
+        const blogpostData = await BlogPost.findOne({
             where: {
                 id: req.params.id
             }
