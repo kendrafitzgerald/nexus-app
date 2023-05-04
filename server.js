@@ -4,6 +4,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
+const SpotifyWebApi = require('spotify-web-api-node');
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -27,6 +28,13 @@ const sess = {
     db: sequelize,
   }),
 };
+
+// const spotifyApi = new SpotifyWebApi({
+//   clientId: '776792bc6b024ed380c32712348eb4b2',
+//   clientSecret: '3c481c13f671408ca6a504f98e00f465',
+//   redirectUri: 'http://localhost:3001/profile'
+// });
+
 
 app.use(session(sess));
 
