@@ -5,11 +5,12 @@ const signupFormHandler = async (event) => {
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     const school = document.querySelector('#school-signup').value.trim();
-
-    if (username && email && password && school) {
+  const major = document.querySelector('#username-major').value.trim();
+  const clubs = document.querySelector('#username-club').value.trim();
+    if (username && email && password && school && major && clubs) {
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ username, email, password, school}),
+        body: JSON.stringify({ username, email, password, school, major, clubs}),
         headers: { 'Content-Type': 'application/json' },
       });
   
