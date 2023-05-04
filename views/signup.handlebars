@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card login-form">
   <h3 class="card-header">Signup Form</h3>
   <form id="signup-form" class="card-body">
 
@@ -21,6 +21,24 @@
         class="form-input"
       />
 
+      <label class="form-label" for="major">Major</label>
+      <input
+        id="username-major"
+        type="text"
+        placeholder="Enter Major"
+        autofocus="true"
+        class="form-input"
+      />
+
+       <label class="form-label" for="clubs">Clubs</label>
+      <input
+        id="username-club"
+        type="text"
+        placeholder="Enter Club"
+        autofocus="true"
+        class="form-input"
+      />
+
       <label class="form-label" for="username-login">Username</label>
       <input
         id="username-signup"
@@ -38,11 +56,17 @@
         autofocus="true"
         class="form-input"
       />
+      {{!-- <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" />
+    <button type="submit">Upload</button>
+</form> --}}
     </div>
+   
+ <button type="submit" class="button btn-primary">Sign Up</button>
 
-    <div class="signup">
-      <a href="/signup">Sign up</a>
-    </div>
+    {{!-- <div class="signup">
+      <a href="/login">Sign Up</a>
+    </div> --}}
   </form>
 </div>
 <script src="/js/signup.js"></script>

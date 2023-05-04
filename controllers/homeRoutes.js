@@ -24,7 +24,7 @@ router.get('/', async(req, res) => {
 });
 
 // Get Single posts with id
-router.get('/posts/:id', async (req, res) => {
+router.get('/posts/:id', withAuth, async (req, res) => {
     try {
         const postData = await BlogPost.findByPk(req.params.id, {
             include: [
@@ -42,7 +42,8 @@ router.get('/posts/:id', async (req, res) => {
         });
         //render on the posts page
         const post = postData.get({plain:true});
-        res.render('posts', {
+        console.log(post)
+        res.render('post', {
             ...post,
             loggedIn: req.session.loggedIn,
         })
@@ -51,7 +52,7 @@ router.get('/posts/:id', async (req, res) => {
     }
 });
 
-// accessing users profile withe their blog-posts
+// accessing users profile with their blog-posts
 router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.userID, {

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -12,40 +13,45 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
-    <div class="bg-info-subtle bg-gradient">
+  <body id="body-color">
+    <div id="nexus-header">
       <div class="header">
-        <h1 class="text-primary-emphasis pt-5">Nexus</h1>
-        <p class="fst-italic fw-lighter text-primary-emphasis pt-3">Find College
+        <h1 class=" pt-5 font-monospace"><i class="fa fa-graduation-cap fa-bounce" id="icon" aria-hidden="true"></i></i>Nexus</h1>
+        {{!-- <img src="../../images/nexus-logo.png" alt="nexus logo"> logo is not rendering--}}
+        <p class="fst-italic fw-lighter pt-5 font-monospace">Find College
           Life Hacks by Making Meaningful Connections</p>
       </div>
       <div>
         <nav class="navbar justify-content-end">
           <ul class="nav nav-tabs">
             <li class="nav-item">
-              <a class="nav-link text-primary-emphasis" href="/">Home</a>
+              <a class="nav-link text-primary-emphasis font-monospave" href="/"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-primary-emphasis"
+                class="nav-link text-primary-emphasis font-monospace"
                 href="/profile"
-              >Profile</a>
+              ><i class="fas fa-user mx-1"></i>Profile</a>
             </li>
             {{#if loggedIn}}
-              <button class="button" id="logout">Log Out</button>
-
+             <li class="nav-item">
+              <a
+                class="nav-link text-primary-emphasis font-monospace" id ="logout"
+                href="/login"
+              ><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+            </li>
             {{else}}
               <li class="nav-item">
                 <a
-                  class="nav-link text-primary-emphasis"
+                  class="nav-link text-primary-emphasis font-monospace"
                   href="/login"
-                >Login</a>
+                ><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link text-primary-emphasis"
+                  class="nav-link text-primary-emphasis font-monospace"
                   href="/signup"
-                >Signup</a>
+                ><i class="fa fa-user-plus" aria-hidden="true"></i>Signup</a>
               </li>
             {{/if}}
           </ul>
@@ -56,9 +62,7 @@
         {{/if}}
       </div>
     </div>
-
     {{{body}}}
-
   </body>
   <script
     src="https://kit.fontawesome.com/d8cc2471fb.js"
