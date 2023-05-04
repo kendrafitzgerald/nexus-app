@@ -13,7 +13,7 @@ const newPostHandler = async (event) => {
     const content = document.querySelector('#content').value.trim();
   
     if (title && content) {
-      const response = await fetch('/api/users/profile', {
+      const response = await fetch('/api/posts', {
         method: 'POST',
         body: JSON.stringify({ title, content }),
         headers: { 'Content-Type': 'application/json' },
@@ -21,11 +21,11 @@ const newPostHandler = async (event) => {
   
       if (response.ok) {
         // If response is ok , reload page
-        document.location.reload();
+        document.location.replace('/profile');
       } else {
         alert(response.statusText);
       }
     };
 };
 
-document.querySelector('#submit-button').addEventListener('click', newPostHandler);
+document.querySelector('#submit-post').addEventListener('submit', newPostHandler);
