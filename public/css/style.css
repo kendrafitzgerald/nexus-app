@@ -39,3 +39,28 @@ input[type="password"] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
+#icon {
+  color: lightblue;
+
+}
+
+#nexus-header {
+  background-image: linear-gradient(to bottom right, darkcyan, lightblue, white);
+}
+
+#homepage-title {
+  font-size: 30px;
+  color: #1d3b55;
+}
+
+#body-color {
+  background-image: linear-gradient(to bottom right, lightcyan, white);
+}
+
+#post-card {
+  background-color: lightblue;
+  /* maybe change background color? can't tell if it looks weird */
+  /* cannot get text color to change */
+  /* text-decoration: none !important; will not get rid of underlined text in card */
+}
