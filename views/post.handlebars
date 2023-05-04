@@ -10,7 +10,6 @@
 {{#if comments.length}}
       {{#each comments}}
       <div class="card" style="width: 18rem;">
-        <a href="/posts/{{id}}">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">{{content}}</p>
@@ -18,18 +17,17 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item">You posted this on: {{format_date createdAt}}</li>
         </ul>
-        </a>
       </div>
       {{/each}}
       {{else}}
       <p>You have no comments. Add one now.</p>
       {{/if}}
 
-      <div class="row mt-4" id="new-comment-form" style="display:none">
+      <div class="row mt-4" id="new-comments-form" style="display:none">
         <div class="col-md-6">
           <h3>Add a new comment</h3>
 
-          <form class="form" id="submit-post">
+          <form class="form" id="submit-comments">
             <div class="form-group">
               <label for="content">Comment text:</label>
               <textarea class="form-input" id="content" name="content"></textarea>
@@ -44,3 +42,4 @@
       <button class="btn btn-primary" id="create-button">Add a new comment</button>
 
       <script src="/js/createPost.js"></script>
+      <script src="/js/comments.js"></script>
