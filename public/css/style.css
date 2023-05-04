@@ -6,9 +6,24 @@ button {
   border: none;
   cursor: pointer;
 }
+h1, p{
+  margin: 0, 30px;
+}
 
 .card {
   text-align: center;
+  width: 100%;
+  margin: 50px 25px;
+  font-size: 20px;
+}
+
+.card-header{
+  color: brown;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h3 {
+  color: #04aa6d !important;
 }
 
 .container {
@@ -18,8 +33,16 @@ form {
   border: 3px solid #f1f1f1;
 }
 
+.login-form{
+  width: 50%;
+}
+
 .form-label {
   font-size: 20px;
+}
+
+a{
+  text-decoration: none;
 }
 
 input[type="text"] {
@@ -41,12 +64,16 @@ input[type="password"] {
 
 #icon {
   color: lightblue;
-
 }
 
 #nexus-header {
-  background-image: linear-gradient(to bottom right, darkcyan, lightblue, white);
-  color: rgb(150, 17, 17)
+  background-image: linear-gradient(
+    to bottom right,
+    darkcyan,
+    lightblue,
+    white
+  );
+  color: rgb(150, 17, 17);
 }
 
 #homepage-title {
@@ -59,8 +86,25 @@ input[type="password"] {
 }
 
 #post-card {
-  background-color: #D4F1F4;
+  background-color: #d4f1f4;
   /* maybe change background color? can't tell if it looks weird */
   /* cannot get text color to change */
-  text-decoration: none !important; 
+  text-decoration: none !important;
+}
+
+@media (max-width: 576px) {
+  .header, h3{
+    text-align: center;
+  }
+
+  .navbar{
+    display: flex;
+    text-align: center;
+  }
+
+  .login-form{
+    display: flex;
+    width: 100%;
+  }
+
 }
