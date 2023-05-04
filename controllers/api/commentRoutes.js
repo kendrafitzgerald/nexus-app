@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { Comments, BlogPost, User } = require('../../models');
 const withAuth = require('../../utils/withAuth');
+const { Comments, BlogPost, User } = require('../../models');
+
 
 // CREATE a comment
 router.post('/:id', withAuth, async (req, res) => {
@@ -23,7 +24,7 @@ router.post('/:id', withAuth, async (req, res) => {
 
         const newComment = await Comments.create({
             content: req.body.content,
-            blogpost_id: blogpostID,
+            post_id: blogpostID,
             user_id: userID
         });
         res.status(200).json(newComment);
@@ -55,7 +56,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 
         const newComment = await Comments.destroy({
             content: req.body.content,
-            blogpost_id: blogpostID,
+            post_id: blogpostID,
             user_id: userID
         });
         res.status(200).json(newComment);
