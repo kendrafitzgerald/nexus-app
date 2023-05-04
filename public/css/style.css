@@ -59,7 +59,7 @@ input[type="password"] {
 }
 
 #post-card {
-  background-color: lightblue;
+  background-color: #D4F1F4;
   /* maybe change background color? can't tell if it looks weird */
   /* cannot get text color to change */
   /* text-decoration: none !important; will not get rid of underlined text in card */
