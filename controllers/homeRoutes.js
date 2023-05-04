@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const withAuth = require('../utils/withAuth');
-const spotifyApi = require('../server')
 const {User, BlogPost, Comments} = require('../models');
 
 router.get('/', async(req, res) => {
@@ -43,7 +42,7 @@ router.get('/posts/:id', async (req, res) => {
         });
         //render on the posts page
         const post = postData.get({plain:true});
-        res.render('posts', {
+        res.render('post', {
             ...post,
             loggedIn: req.session.loggedIn,
         })
@@ -52,7 +51,7 @@ router.get('/posts/:id', async (req, res) => {
     }
 });
 
-// accessing users profile withe their blog-posts
+// accessing users profile with their blog-posts
 router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.userID, {

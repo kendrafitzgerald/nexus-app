@@ -5,7 +5,6 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 10%;
 }
 
 .card {
@@ -47,6 +46,7 @@ input[type="password"] {
 
 #nexus-header {
   background-image: linear-gradient(to bottom right, darkcyan, lightblue, white);
+  color: rgb(150, 17, 17)
 }
 
 #homepage-title {
@@ -62,5 +62,5 @@ input[type="password"] {
   background-color: #D4F1F4;
   /* maybe change background color? can't tell if it looks weird */
   /* cannot get text color to change */
-  /* text-decoration: none !important; will not get rid of underlined text in card */
+  text-decoration: none !important; 
 }
