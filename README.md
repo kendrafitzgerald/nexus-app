@@ -2,19 +2,28 @@
 
 ## Description 
 
-Nexus is an app built from scratch for Project 3. Nexus functions as a college life social network blog to give students a platform to discuss their school experiences and connect with other students based on shared interests, universities, or majors without already needing to be immersed in university life. Nexus's standout feature is the ability for students to link their spotify account to post their most recent listening, because shared music taste is a fast track way to find compatibility. The user is a college student who wants to connect with other students via a blog so that they can see other students' expereinces and interests for references, recommendations and community support. 
+Nexus is an app built from scratch for Project 3. Nexus functions as a college life social network blog to give students a platform to discuss their school experiences and connect with other students based on shared interests, universities, or majors without already needing to be immersed in university life. The user is a college student who wants to connect with other students via a blog so that they can see other students' expereinces and interests for references, recommendations and community support. 
 
 ### Installation
 
-1. Clone to your computer
-2. Perform a git pull in your terminal
-3. Git add to your chosen folder
-4. Code Open .
-5. Create sing-up and profile
-6. Link Spotify account
-7. Explore, share and post 
+1. Access QR code to deploy app or click on url link to deploy webiste
 
-#### License 
+#### Usage
+1. Sign-up with username and password to create account
+2. Add image to profile
+3. Post comment and explore
+
+##### Credits
+[Kendra Fitzgerald](https://github.com/kendrafitzgerald), project manager: users.js, userRoutes.js, api index routes, main.handlebars, homepage.handlebars, createPost.js, styling and wireframe
+[Sarita Kharabe](https://github.com/saritakharabe) cloudinary.js, index.js, index.routes, login.js, logout.js, signup.js, login.handlebars, signup.handlebars, post.handlebars, mobile responsiveness, styling and wireframe 
+[Melanie Sapiandante](https://github.com/msapiandante): blogRoutes.js, commentRoutes.js, blogPosts.js, profile.handlebars, addcomments.js, styling and wireframe
+[Brooke White](https://github.com/bro74): comments.js, README
+[Clouidnary](https://www.npmjs.com/package/cloudinary) 
+[Bootstrap](https://getbootstrap.com/)
+[AI Buisness Name Generator](https://www.brandcrowd.com/business-name-generator)
+[Draw.io](https://app.diagrams.net/)
+
+###### License 
 
 MIT License
 
