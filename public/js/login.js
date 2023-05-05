@@ -1,8 +1,4 @@
-
-// login.addEventListener('click', () => {
-//     login.setAttribute('style','display: none');
-//     signup.setAttribute('style','display: none')
-// });
+//checks user to make sure their password and username matches, then logs user in
 
 const loginFormHandler = async (event) => {
     event.preventDefault();

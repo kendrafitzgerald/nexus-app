@@ -1,3 +1,6 @@
+//this code fetches a comment by the id to post it onto the post attributed to it
+//there are bugs in this functionality, but when a user clicks create comment, a form to do so is displayed
+
 let createCommentButton = document.getElementById('create-button');
 
 let commentForm = document.getElementById('new-comments-form');
