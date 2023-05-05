@@ -11,12 +11,16 @@ h1, p{
   margin: 0, 30px;
 }
 
+.post-card{
+  display: flex;
+}
+
 .card {
   text-align: center;
   width: 100%;
   margin: 50px 25px;
   font-size: 20px;
-  display: flex;
+  display: inline-block;
 }
 
 .upload-img{
@@ -116,5 +120,11 @@ input[type="password"] {
   .login-form{
     display: flex;
     width: 100%;
+  }
+
+  .post-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
