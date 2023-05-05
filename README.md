@@ -14,9 +14,9 @@ Nexus is an app built from scratch for Project 3. Nexus functions as a college l
 3. Post comment and explore
 
 ##### Credits
-[Kendra Fitzgerald](https://github.com/kendrafitzgerald), project manager: users.js, userRoutes.js, api index routes, main.handlebars, login.handlebars, signup.handlebars, homepage.handlebars, createPost.js, login.js, logout.js, signup.js, styling and wireframe
+[Kendra Fitzgerald](https://github.com/kendrafitzgerald), project manager: users.js, userRoutes.js, api index routes, main.handlebars, homepage.handlebars, createPost.js, styling and wireframe
+[Sarita Kharabe](https://github.com/saritakharabe) cloudinary.js, index.js, index.routes, login.js, logout.js, signup.js, login.handlebars, signup.handlebars, post.handlebars, mobile responsiveness, styling and wireframe 
 [Melanie Sapiandante](https://github.com/msapiandante): blogRoutes.js, commentRoutes.js, blogPosts.js, profile.handlebars, addcomments.js, styling and wireframe
-[Sarita Kharabe](https://github.com/saritakharabe) cloudinary.js, index.js, index.routes, post.handlebars, styling and wireframe 
 [Brooke White](https://github.com/bro74): comments.js, README
 [Clouidnary](https://www.npmjs.com/package/cloudinary) 
 [Bootstrap](https://getbootstrap.com/)
