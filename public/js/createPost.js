@@ -1,3 +1,4 @@
+//shows a form to create new post upon click, when post is submitted it is added to homepage and that users profile
 let createButton = document.getElementById('create-button');
 
 let postForm = document.getElementById('new-post-form');

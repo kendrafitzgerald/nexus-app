@@ -1,3 +1,4 @@
+//when a user signs up, they must input this information, then they are added to the database as a user
 const signupFormHandler = async (event) => {
     event.preventDefault();
   

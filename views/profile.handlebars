@@ -1,4 +1,4 @@
-<div class="container">
+
   <h1 class="text-center my-4">Welcome {{username}}!</h1>
   <div class="row">
     <div class="col-md-4">
@@ -29,21 +29,23 @@
       <img id="uploadedimage" src="" />{{image}}
     </div>
   </div>
-</div>
+
 
 <button id="upload_widget" class="cloudinary-button">Upload files</button>
+<button class="btn btn-primary" id="create-button">Create a New Post</button>
 
 {{! we need user name, that user's school information, users posts, option to
       create a new post, and this is where spotify will go? }}
 {{log this}}
 {{#if blogPosts.length}}
+<div class="container px-3" id="profile-posts">
+  <div class="row">
   {{#each blogPosts}}
-    <div class="card" style="width: 18rem;">
+    <div class="card  mb-3 col gx-2 px-2 mx-2" style="width: 18rem;">
       <a href="/posts/{{id}}">
-        <img src="..." class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">{{blogPosts.title}}</h5>
-          <p class="card-text">{{blogPosts.content}}</p>
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{content}}</p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">You posted this on:
@@ -80,8 +82,6 @@
     </form>
   </div>
 </div>
-
-<button class="btn btn-primary" id="create-button">Create a New Post</button>
 <script
   src="https://upload-widget.cloudinary.com/global/all.js"
   type="text/javascript"

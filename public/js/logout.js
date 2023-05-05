@@ -1,3 +1,4 @@
+//when a user hist log out button, ends session and replaces page with login page
 const logoutProfile = async () => {
     const loginResponse = await fetch('/api/users/logout', {
         method: 'POST',

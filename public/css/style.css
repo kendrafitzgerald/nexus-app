@@ -1,3 +1,4 @@
+
 button {
   background-color: #04aa6d;
   color: white;
@@ -17,6 +18,7 @@ h1, p{
   font-size: 20px;
   display: flex;
 }
+
 .upload-img{
   display: block;
   width: 50%;
@@ -92,11 +94,15 @@ input[type="password"] {
 
 #post-card {
   background-color: #d4f1f4;
-  /* maybe change background color? can't tell if it looks weird */
-  /* cannot get text color to change */
   text-decoration: none !important;
 }
 
+#create-button {
+  height: 50px;
+}
+#profile-posts {
+  margin-top: -5%;
+}
 @media (max-width: 576px) {
   .header, h3{
     text-align: center;
@@ -111,5 +117,4 @@ input[type="password"] {
     display: flex;
     width: 100%;
   }
-
 }

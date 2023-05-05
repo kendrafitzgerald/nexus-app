@@ -1,3 +1,4 @@
+//widget to upload images and append them to page
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'denuaoe88', 
     uploadPreset: 'lvppdmx9'}, (error, result) => { 
